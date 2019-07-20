@@ -6,7 +6,7 @@
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["background.js"]
+        "js": ["jquery-3.4.1.min.js", "background.js"]
       }
     ],
     "browser_action": {
@@ -16,6 +16,5 @@
 
       }
     },
-
     "manifest_version": 2
   }
