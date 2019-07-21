@@ -16,8 +16,6 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 ```bash
 # Clone this repository
 $ git clone https://github.com/meyerclemon/MediaBiasExtension
-# Navigate to top level of directory
-$ npm install
 # Navigate to chrome://extensions
 # Select 'Developer Mode'
 # Drag MediaBiasExtension folder to extensions page
@@ -29,10 +27,6 @@ $ npm install
 * CSS
 * HTML
 * Visual Studio Code (Text Editor)
-* Node.js v10.15.3
-* npm v6.4.1
-* React
-* Babel v7.0.0
 
 Maya Frame(mayacframe@gmail.com)
 If you have any feedback or concerns, please contact any of the contributors.
