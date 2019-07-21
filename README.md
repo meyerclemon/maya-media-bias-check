@@ -21,8 +21,8 @@ $ git clone https://github.com/meyerclemon/MediaBiasExtension
 # Drag MediaBiasExtension folder to extensions page
 # OR
 # Click 'Load Unpacked' and choose MediaBiasExtension folder from the directory
-
-#Built With
+```
+# Built With
 * JavaScript
 * CSS
 * HTML
