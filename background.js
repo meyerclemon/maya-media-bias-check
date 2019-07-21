@@ -1,14 +1,7 @@
-
-
-
-let links = document.getElementsByTagName('a');
-$( "a:contains('nytimes.com')" ).css( "color", "green" );
-
-
-// var elementsInsideBody = [...document.body.getElementsByTagName('*')];
-
-// let links = document.getElementsByTagName('a');
-// for (elt of links) {
-// elt.style['color'] = '#FF00FF';
-// }
-// console.log(links);
+var links = [...document.body.getElementsByTagName("a")];
+for (var i = 0; i < links.length; i++) {
+  if (links[i]["href"].indexOf("www.nytimes.com") == -1) {
+    continue;
+  }
+  links[i].style["color"] = "green";
+}
