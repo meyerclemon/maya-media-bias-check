@@ -1,9 +1,16 @@
 <!DOCTYPE html>
+<head>
+        <title>InfoBox</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="jquery-3.4.1.js"></script>
+        <script src="infoBox.js"></script>
+      </head>
 <html>
     <body>
         <div class="infoBox">
-            <h4>Overall Quality</h4>
-                <ul class="quality">
+            <div class="vertical">
+                <h4>Overall Quality</h4>
+                <ul >
                     <li id="originalReporting">Original Fact Reporting</li>
                     <li id="factReporting">Fact Reporting</li>
                     <li id="complexMix">Complex Analysis OR Mix of Fact Reporting and Analysis</li>
@@ -13,8 +20,11 @@
                     <li id="propaganda">Propaganda/Contains Misleading Info</li>
                     <li id="inaccurateFabricated">Contains Inaccurate/Fabricated Info</li>
                 </ul>
-            <h4>Political Bias</h4>
-                <ul class="bias">
+            </div>
+
+            <div class="horizontal">
+                <h4>Political Bias</h4>
+                <ul >
                     <li id="extremeLeft">Most Extreme Left</li>
                     <li id="partisanLeft">Hyper-Partisan Left</li>
                     <li id="skewsLeft">Skews Left</li>
@@ -23,6 +33,8 @@
                     <li id="partisanRight">Hyper-Partisan Right</li>
                     <li id="extremeRight">Most Extreme Right</li>
                 </ul>
+            </div>
+                <div class="result"></div>
         </div>
     </body>
 </html>
