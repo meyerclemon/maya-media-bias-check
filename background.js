@@ -1,16 +1,19 @@
 var links = [...document.body.getElementsByTagName("a")];
-var greens = ["bbc.com","thehill.com","csmonitor.com","politico.com","npr.org","pbs.org"];
-var greenYellows = ["nytimes.com", "washingtonpost.com", "axios.com", "newyorker.com", "wsj.com"];
-var yellows = ["usatoday.com", "cnn.com", "vanityfair.com"];
-var oranges = ["dailykos.com"];
+
+var greens = ["bbc.com","thehill.com","csmonitor.com","politico.com","npr.org","pbs.org", "apnews.com","www.ap.org", "latimes.com", "nbcnews.com", "cbsnews.com", "abcnews.go.com", "reuters.com", "cnbc.com", "bloomberg.com"];
+var greenYellows = ["nytimes.com", "washingtonpost.com", "axios.com", "newyorker.com", "wsj.com", "vox.com", "theguardian.com", "buzzfeednews.com", "propublica.org"];
+var yellows = ["usatoday.com", "cnn.com", "vanityfair.com", "thedailybeast.com", "msnbc.com", "washingtonexaminer.com", "nationalreview.com", "talkingpointsmemo.com"];
+var oranges = ["dailykos.com", "huffpost.com", "motherjones.com"];
 var orangeReds = ["alternet.org", "dailymail.co.uk", ];
-var reds = ["foxnews.com", "breitbart.com"];
+var reds = ["foxnews.com", "breitbart.com", "patribotics.blog"];
+
 
 for (var i = 0; i < links.length; i++) {
     if (!greens.some(green => links[i].href.includes(green))) {
       continue;
     }
     links[i].style["color"] = "green";
+    links[i].style["font-weight"] = "bold";
   }
 
   for (var i = 0; i < links.length; i++) {
@@ -18,6 +21,7 @@ for (var i = 0; i < links.length; i++) {
       continue;
     }
     links[i].style["color"] = "rgba(145,232,66,1)";
+    links[i].style["font-weight"] = "bold";
   }
 
   for (var i = 0; i < links.length; i++) {
@@ -25,6 +29,7 @@ for (var i = 0; i < links.length; i++) {
       continue;
     }
     links[i].style["color"] = "#CCCC00";
+    links[i].style["font-weight"] = "bold";
   }
 
   for (var i = 0; i < links.length; i++) {
@@ -32,6 +37,7 @@ for (var i = 0; i < links.length; i++) {
       continue;
     }
     links[i].style["color"] = "#e67300";
+    links[i].style["font-weight"] = "bold";
   }
 
   for (var i = 0; i < links.length; i++) {
@@ -39,15 +45,22 @@ for (var i = 0; i < links.length; i++) {
       continue;
     }
     links[i].style["color"] = "#FF4500";
+    links[i].style["font-weight"] = "bold";
   }
-
 
   for (var i = 0; i < links.length; i++) {
     if (!reds.some(red => links[i].href.includes(red))) {
       continue;
     }
-    links[i].style["color"] = "#8b0000";
+    links[i].style["color"] = "red";
+    links[i].style["font-weight"] = "bold";
   }
+
+
+
+
+
+
 
 // for (var i = 0; i < links.length; i++) {
 //     const href = links[i].href;
@@ -66,7 +79,6 @@ for (var i = 0; i < links.length; i++) {
 //   }
 // links[i].style.color = "rgba(145,232,66,1)";
 // }
-
 
 // for (var i = 0; i < links.length; i++) {
 //     const href = links[i].href;
