@@ -1,35 +1,29 @@
 {
-    "name": "Media Bias Extension",
-    "version": "1.0",
-    "description": "Know your sources!",
-    "manifest_version": 2,
+  "name": "Media Bias Extension",
+  "version": "1.0",
+  "description": "Know your sources!",
+  "manifest_version": 2,
 
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["jquery-3.4.1.min.js", "background.js"]
-      }
-    ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.4.1.min.js", "background.js"]
+    }
+  ],
 
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "128": "icon/lemon128.png",
-        "48": "icon/lemon48.png",
-        "16": "icon/lemon16.png"
-      }
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon/lemon128.png",
+      "48": "icon/lemon48.png",
+      "16": "icon/lemon16.png"
     },
-    "background": {
-      "scripts": ["eventPage.js"],
-      "persistent": false
-    },
+    "default_title": "Media Bias Key"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
 
-    "permissions": 
-    ["activeTab", 
-      "declarativeContent", 
-      "storage",
-      "contextMenus"
-    ]
-  
-
-  }
+  "permissions": ["activeTab", "declarativeContent", "storage", "contextMenus"]
+}
