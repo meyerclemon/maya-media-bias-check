@@ -3,6 +3,7 @@
   padding: 10px;
   width: 600px;
   height: 250px;
+  display: none;
 }
 
 .vertical {
@@ -12,4 +13,3 @@
 .horizontal {
   float: right;
 }
-
