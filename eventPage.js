@@ -13,15 +13,15 @@ function fixedEncodeURI(str) {
 
 chrome.contextMenus.onClicked.addListener(function(clickData) {
   if (clickData.menuItemId == "checkMediaBias" && clickData.selectionText) {
-    var moreInfo =
-      "https://en.wikipedia.org/wiki" + fixedEncodeURI(clickData.selectionText);
+    var moreInfo = "infoBox.html";
+    // + fixedEncodeURI(clickData.selectionText);
     var createData = {
       url: moreInfo,
       type: "popup",
       top: 5,
       left: 5,
-      width: parseInt(screen.availWidth / 2),
-      height: parseInt(screen.availHeight / 2)
+      width: parseInt(screen.availWidth / 4),
+      height: parseInt(screen.availHeight / 4)
     };
     chrome.windows.create(createData, function() {});
   }

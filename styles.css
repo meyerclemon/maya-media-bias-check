@@ -1,15 +1,14 @@
 .infoBox {
-    border: solid black;
-    padding: 10px;
-    width: 700px;
-    height: 300px;
+  border: solid black;
+  padding: 10px;
+  width: 600px;
+  height: 250px;
 }
 
 .vertical {
-    float: left;
-;
+  float: left;
 }
 
 .horizontal {
-    float: right;
+  float: right;
 }
