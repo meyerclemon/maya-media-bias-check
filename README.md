@@ -1,7 +1,7 @@
 # Media Bias Check Extension
 By Maya Frame 7/19/2019
 ## Description
-Informs the user about the general political bias and factual accuracy of an online news source by color-coding links according to Media Bias Chart 4.0.
+Empowers the user to make informed choices about their media consumption. Color-coded links depict the general political bias and factual accuracy of an online news source according to Media Bias Chart 4.0.
 Right-clinking link generates a context menu with more information about the source's axis placement on the Media Bias Chart.
 ![Media Bias Chart 4.0](/images/Media-Bias-Chart_4.0.jpg)
 
