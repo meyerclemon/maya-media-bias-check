@@ -7,7 +7,7 @@ Right-clinking link generates a context menu with more information about the sou
 
 ## Specs 
 1. Follow Chrome Extensions setup instructions
-2. Search document innerHTML for string matches 
+2. Search document for string matches 
 3. Create color components for certain string matches
 
 ## Setup and Use
