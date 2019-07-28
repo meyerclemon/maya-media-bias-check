@@ -127,7 +127,7 @@ for (var i = 0; i < links.length; i++) {
   if (!orangeReds.some(orangeRed => links[i].href.includes(orangeRed))) {
     continue;
   }
-  links[i].style["color"] = "#FF4500";
+  links[i].style["color"] = "brown";
   links[i].style["font-weight"] = "bold";
 }
 

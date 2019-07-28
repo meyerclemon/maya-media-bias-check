@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $("#criteria").submit(function(event){
+    $(".infoBox").submit(function(event){
+
+
 
 if ((x >= -18 && x < 18) 
 && (y >= 45 && y <= 64)) {

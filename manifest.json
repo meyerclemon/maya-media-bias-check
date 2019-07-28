@@ -14,16 +14,16 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "128": "icon/lemon128.png",
-      "48": "icon/lemon48.png",
-      "16": "icon/lemon16.png"
+      "128": "images/lemon128.png",
+      "48": "images/lemon48.png",
+      "16": "images/lemon16.png"
     },
     "default_title": "Media Bias Key"
   },
   "background": {
-    "scripts": ["eventPage.js"],
+    "scripts": ["contextMenu/eventPage.js"],
     "persistent": false
   },
 
-  "permissions": ["activeTab", "declarativeContent", "storage", "contextMenus"]
+  "permissions": ["activeTab", "declarativeContent", "storage", "contextMenus", "<all_urls>"]
 }

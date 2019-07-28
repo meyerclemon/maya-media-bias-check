@@ -13,7 +13,7 @@ function fixedEncodeURI(str) {
 
 chrome.contextMenus.onClicked.addListener(function(clickData) {
   if (clickData.menuItemId == "checkMediaBias" && clickData.selectionText) {
-    var moreInfo = "infoBox.html";
+    var moreInfo = "contextMenu/infoBox.html";
     // + fixedEncodeURI(clickData.selectionText);
     var createData = {
       url: moreInfo,
