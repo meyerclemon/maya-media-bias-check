@@ -14,9 +14,8 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "128": "images/lemon128.png",
-      "48": "images/lemon48.png",
-      "16": "images/lemon16.png"
+      "128": "images/target.png"
+
     },
     "default_title": "Media Bias Key"
   },
