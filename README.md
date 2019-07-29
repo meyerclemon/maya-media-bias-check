@@ -9,6 +9,9 @@ Right-clinking link generates a context menu with more information about the sou
 1. Follow Chrome Extensions setup instructions
 2. Search document for string matches 
 3. Create color components for certain string matches
+4. Create popup color key on chart background when icon is clicked
+5. Create context menu item for more info
+6. Make popup a clickable link to website
 
 ## Setup and Use
 From your command line:
