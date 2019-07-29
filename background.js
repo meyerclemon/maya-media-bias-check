@@ -1,4 +1,3 @@
-var links = [...document.body.getElementsByTagName("a")];
 
 var greens = [
   "abcnews.go.com",
@@ -67,7 +66,7 @@ var orangeReds = [
   "foxnews.com",
   "guacamoley.com",
   "nypost.com",
-  "pjmedia.com"
+  "pjmedia.com"   
 ];
 var reds = [
   "bipartisanreport.com",
@@ -90,6 +89,8 @@ var reds = [
   "wonkette.com",
   "worldtruth.tv"
 ];
+
+var links = [...document.body.getElementsByTagName("a")];
 
 for (var i = 0; i < links.length; i++) {
   if (!greens.some(green => links[i].href.includes(green))) {
