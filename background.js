@@ -67,7 +67,7 @@ var orangeReds = [
   "foxnews.com",
   "guacamoley.com",
   "nypost.com",
-  "pjmedia.com"   
+  "pjmedia.com"
 ];
 var reds = [
   "bipartisanreport.com",
@@ -90,7 +90,6 @@ var reds = [
   "wonkette.com",
   "worldtruth.tv"
 ];
-
 
 for (var i = 0; i < links.length; i++) {
   if (!greens.some(green => links[i].href.includes(green))) {
@@ -139,6 +138,3 @@ for (var i = 0; i < links.length; i++) {
   links[i].style["color"] = "red";
   links[i].style["font-weight"] = "bold";
 }
-
-
-

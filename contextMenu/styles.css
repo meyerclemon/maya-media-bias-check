@@ -1,24 +1,21 @@
 .infoBox {
-
- border: solid 4px;
- border-block-start-color: green;
- border-left-color: green;
- border-block-end-color: #CCCC00;
- border-right-color: #CCCC00;
- padding-left: 20px;
- height: 260px;
-
+  border: solid 4px;
+  border-block-start-color: green;
+  border-left-color: green;
+  border-block-end-color: #cccc00;
+  border-right-color: #cccc00;
+  padding-left: 20px;
+  height: 260px;
 }
 
 .source {
- text-align: center;
-} 
+  text-align: center;
+}
 
 #news {
-  color:  green;
-
+  color: green;
 }
 
 #fair {
-  color: #CCCC00;
+  color: #cccc00;
 }

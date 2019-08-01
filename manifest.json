@@ -15,7 +15,6 @@
     "default_popup": "popup.html",
     "default_icon": {
       "128": "images/target.png"
-
     },
     "default_title": "Media Bias Key"
   },
@@ -24,5 +23,11 @@
     "persistent": false
   },
 
-  "permissions": ["activeTab", "declarativeContent", "storage", "contextMenus", "<all_urls>"]
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "contextMenus",
+    "<all_urls>"
+  ]
 }
