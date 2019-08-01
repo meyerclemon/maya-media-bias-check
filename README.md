@@ -1,5 +1,5 @@
 # Media Bias Check Extension
-By Maya Frame 7/19/2019
+By Maya Frame - July 2019
 ## Description
 Empowers the user to make informed choices about their media consumption. Color-coded links depict the general political bias and factual accuracy of an online news source according to Media Bias Chart 4.0.
 Right-clinking link generates a context menu with more information about the source's axis placement on the Media Bias Chart.
@@ -13,15 +13,19 @@ Right-clinking link generates a context menu with more information about the sou
 5. Create context menu item for more info
 6. Make popup a clickable link to website
 
+### Also:
+* Add comments
+* Refactor background.js
+
 ## Setup and Use
 From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/meyerclemon/MediaBiasExtension
+$ git clone https://github.com/meyerclemon/media-bias-extension
 # Navigate to chrome://extensions
 # Select 'Developer Mode'
-# Drag MediaBiasExtension folder to extensions page
+# Drag media-bias-extension folder to extensions page
 # OR
 # Click 'Load Unpacked' and choose MediaBiasExtension folder from the directory
 ```
