@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["jquery-3.4.1.min.js", "background.js"]
+      "js": ["jquery-3.4.1.min.js", "updateLinkColors.js"]
     }
   ],
 
@@ -19,7 +19,7 @@
     "default_title": "Media Bias Key"
   },
   "background": {
-    "scripts": ["contextMenu/eventPage.js"],
+    "page": "background.html",
     "persistent": false
   },
 

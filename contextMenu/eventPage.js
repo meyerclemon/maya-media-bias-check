@@ -1,3 +1,5 @@
+import sources from "../sources.js";
+
 var contextMenuItem = {
   id: "checkMediaBias",
   title: "CheckMediaBias",
