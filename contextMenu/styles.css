@@ -1,15 +1,24 @@
 .infoBox {
-  border: solid black;
-  padding: 10px;
-  width: 600px;
-  height: 250px;
-  display: none;
+
+ border: solid 4px;
+ border-block-start-color: green;
+ border-left-color: green;
+ border-block-end-color: #CCCC00;
+ border-right-color: #CCCC00;
+ padding-left: 20px;
+ height: 260px;
+
 }
 
-.vertical {
-  float: left;
+.source {
+ text-align: center;
+} 
+
+#news {
+  color:  green;
+
 }
 
-.horizontal {
-  float: right;
+#fair {
+  color: #CCCC00;
 }

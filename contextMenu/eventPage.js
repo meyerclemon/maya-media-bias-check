@@ -13,16 +13,19 @@ function fixedEncodeURI(str) {
 
 chrome.contextMenus.onClicked.addListener(function(clickData) {
   if (clickData.menuItemId == "checkMediaBias" && clickData.selectionText) {
-    var moreInfo = "contextMenu/infoBox.html";
+    var moreInfo = "contextMenu/context_menu.html";
     // + fixedEncodeURI(clickData.selectionText);
     var createData = {
       url: moreInfo,
       type: "popup",
       top: 5,
       left: 5,
-      width: parseInt(screen.availWidth / 4),
-      height: parseInt(screen.availHeight / 4)
+      width: parseInt(screen.availWidth / 7),
+      height: parseInt(screen.availHeight / 4.5)
     };
     chrome.windows.create(createData, function() {});
   }
 });
+
+
+

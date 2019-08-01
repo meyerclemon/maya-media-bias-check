@@ -1,4 +1,4 @@
-
+var links = [...document.body.getElementsByTagName("a")];
 var greens = [
   "abcnews.go.com",
   "afp.com",
@@ -24,6 +24,7 @@ var greenYellows = [
   "axios.com",
   "buzzfeednews.com",
   "economist.com",
+  "fivethirtyeight.com",
   "foreignpolicy.com",
   "fortune.com",
   "marketwatch.com",
@@ -90,7 +91,6 @@ var reds = [
   "worldtruth.tv"
 ];
 
-var links = [...document.body.getElementsByTagName("a")];
 
 for (var i = 0; i < links.length; i++) {
   if (!greens.some(green => links[i].href.includes(green))) {
@@ -140,38 +140,5 @@ for (var i = 0; i < links.length; i++) {
   links[i].style["font-weight"] = "bold";
 }
 
-// for (var i = 0; i < links.length; i++) {
-//     const href = links[i].href;
-//     const re = /(bbc.com|thehill.com|csmonitor.com|politico.com|npr.org|pbs.org)/g
-//     if (!re.test(href)) {
-//       continue;
-//     }
-//   links[i].style.color = "green";
-// }
 
-// for (var i = 0; i < links.length; i++) {
-//   const href = links[i].href;
-//   const re = /(nytimes.com|washingtonpost.com)/g
-//   if (!re.test(href)) {
-//     continue;
-//   }
-// links[i].style.color = "rgba(145,232,66,1)";
-// }
 
-// for (var i = 0; i < links.length; i++) {
-//     const href = links[i].href;
-//     const re = /(usatoday.com)/g
-//     if (!re.test(href)) {
-//       continue;
-//     }
-//   links[i].style.color = "#CCCC00";
-// }
-
-// for (var i = 0; i < links.length; i++) {
-//     const href = links[i].href;
-//     const re = /(foxnews.com)/g
-//     if (!re.test(href)) {
-//       continue;
-//     }
-//   links[i].style.color = "red";
-// }

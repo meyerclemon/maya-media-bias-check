@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>InfoBox</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <script src="jquery-3.4.1.js"></script>
+  <script src="contextMenu/infoBox.js"></script>
+  <script src="contextMenu/eventPage.js"></script>
+</head>
+<html>
+  <body> 
+    <div class="infoBox">
+      <div class="source">
+          <h2>New York Times</h2>
+      </div>
+
+      <div class="type">
+        <h4>Type</h4>
+        <li id="news">News</li>
+        <li id="fair">Fair interpretations of the news</li>
+      </div>
+      <div class="vertical">
+        <h4>Overall Quality</h4>
+
+          <li id="originalReporting">Original Fact Reporting</li>
+          <li id="factReporting">Fact Reporting</li>
+
+      </div>
+
+      <div class="horizontal">
+        <h4>Political Bias</h4>
+
+          <li id="neutral">Minimal OR Balanced Bias</li>
+
+      </div>
+      <div class="result"></div>
+    </div>
+  </body>
+</html>

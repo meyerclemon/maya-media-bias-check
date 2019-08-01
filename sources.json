@@ -1,5 +1,5 @@
 
-"  'sources': {
+[
     {
       "News Source": "ABC",
       "Vertical Rank": 57,
@@ -624,4 +624,4 @@
       "Horizontal Rank": 20,
       "URL": "worldtruth.tv"
     }  
-}"
+  ]
