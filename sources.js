@@ -1,626 +1,905 @@
-export default [
+/**
+ * Sources
+ */
+export const sources = [
   {
-    "News Source": "ABC",
-    "Vertical Rank": 57,
-    "Horizontal Rank": 0,
-    URL: "abcnews.com"
+    names: ["ABC"],
+    verticalRank: 57,
+    horizontalRank: 0,
+    urls: ["abcnews.com", "abcnews"]
   },
   {
-    "News Source": "AFP",
-    "Vertical Rank": 62,
-    "Horizontal Rank": 0,
-    URL: "afp.com"
+    names: ["AFP"],
+    verticalRank: 62,
+    horizontalRank: 0,
+    urls: ["afp.com"]
   },
   {
-    "News Source": "Al Jazeera US/Canada News",
-    "Vertical Rank": 54,
-    "Horizontal Rank": -1,
-    URL: "aljazeera.com"
+    names: ["Al Jazeera US/Canada News"],
+    verticalRank: 54,
+    horizontalRank: -1,
+    urls: ["aljazeera.com"]
   },
   {
-    "News Source": "Alternet",
-    "Vertical Rank": 18,
-    "Horizontal Rank": -23,
-    URL: "alternet.org"
+    names: ["Alternet"],
+    verticalRank: 18,
+    horizontalRank: -23,
+    urls: ["alternet.org"]
   },
   {
-    "News Source": "AP",
-    "Vertical Rank": 62,
-    "Horizontal Rank": 0,
-    URL: "www.ap.org"
+    names: ["AP"],
+    verticalRank: 62,
+    horizontalRank: 0,
+    urls: ["www.ap.org"]
   },
   {
-    "News Source": "APNews",
-    "Vertical Rank": 62,
-    "Horizontal Rank": 0,
-    URL: "www.apnews.com"
+    names: ["APNews"],
+    verticalRank: 62,
+    horizontalRank: 0,
+    urls: ["www.apnews.com"]
   },
   {
-    "News Source": "Axios",
-    "Vertical Rank": 52,
-    "Horizontal Rank": -2,
-    URL: "axios.com"
+    names: ["Axios"],
+    verticalRank: 52,
+    horizontalRank: -2,
+    urls: ["axios.com"]
   },
   {
-    "News Source": "BBC",
-    "Vertical Rank": 54,
-    "Horizontal Rank": -3,
-    URL: "bbc.com"
+    names: ["BBC"],
+    verticalRank: 54,
+    horizontalRank: -3,
+    urls: ["bbc.com"]
   },
   {
-    "News Source": "Bipartisan Report",
-    "Vertical Rank": 13,
-    "Horizontal Rank": -27,
-    URL: "bipartisanreport.com"
+    names: ["Bipartisan Report"],
+    verticalRank: 13,
+    horizontalRank: -27,
+    urls: ["bipartisanreport.com"]
   },
   {
-    "News Source": "Bloomberg",
-    "Vertical Rank": 58,
-    "Horizontal Rank": 4,
-    URL: "bloomberg.com"
+    names: ["Bloomberg"],
+    verticalRank: 58,
+    horizontalRank: 4,
+    urls: ["bloomberg.com"]
   },
   {
-    "News Source": "Breitbart",
-    "Vertical Rank": 8,
-    "Horizontal Rank": 34,
-    URL: "breitbart.com"
+    names: ["Breitbart"],
+    verticalRank: 8,
+    horizontalRank: 34,
+    urls: ["breitbart.com"]
   },
   {
-    "News Source": "Business Insider",
-    "Vertical Rank": 39,
-    "Horizontal Rank": 0,
-    URL: "businessinsider.com"
+    names: ["Business Insider"],
+    verticalRank: 39,
+    horizontalRank: 0,
+    urls: ["businessinsider.com"]
   },
   {
-    "News Source": "BuzzFeed News",
-    "Vertical Rank": 51,
-    "Horizontal Rank": -15,
-    URL: "buzzfeednews.com"
+    names: ["BuzzFeed News"],
+    verticalRank: 51,
+    horizontalRank: -15,
+    urls: ["buzzfeednews.com"]
   },
   {
-    "News Source": "CBS",
-    "Vertical Rank": 57,
-    "Horizontal Rank": 4,
-    URL: "cbsnews.com"
+    names: ["CBS"],
+    verticalRank: 57,
+    horizontalRank: 4,
+    urls: ["cbsnews.com"]
   },
   {
-    "News Source": "Christian Science Monitor",
-    "Vertical Rank": 54,
-    "Horizontal Rank": 6,
-    URL: "csmonitor.com"
+    names: ["Christian Science Monitor"],
+    verticalRank: 54,
+    horizontalRank: 6,
+    urls: ["csmonitor.com"]
   },
   {
-    "News Source": "CNN",
-    "Vertical Rank": 32,
-    "Horizontal Rank": -6,
-    URL: "cnn.com"
+    names: ["CNN"],
+    verticalRank: 32,
+    horizontalRank: -6,
+    urls: ["cnn.com"]
   },
   {
-    "News Source": "Conservative Tribune",
-    "Vertical Rank": 12,
-    "Horizontal Rank": 35,
-    URL: "westernjournal.com"
+    names: ["Conservative Tribune"],
+    verticalRank: 12,
+    horizontalRank: 35,
+    urls: ["westernjournal.com"]
   },
   {
-    "News Source": "CSPAN",
-    "Vertical Rank": 59,
-    "Horizontal Rank": 0,
-    URL: "c-span.org"
+    names: ["CSPAN"],
+    verticalRank: 59,
+    horizontalRank: 0,
+    urls: ["c-span.org"]
   },
   {
-    "News Source": "Daily Beast",
-    "Vertical Rank": 41,
-    "Horizontal Rank": -21,
-    URL: "thedailybeast.com"
+    names: ["Daily Beast"],
+    verticalRank: 41,
+    horizontalRank: -21,
+    urls: ["thedailybeast.com"]
   },
   {
-    "News Source": "Daily Caller",
-    "Vertical Rank": 12,
-    "Horizontal Rank": 24,
-    URL: "dailycaller.com"
+    names: ["Daily Caller"],
+    verticalRank: 12,
+    horizontalRank: 24,
+    urls: ["dailycaller.com"]
   },
   {
-    "News Source": "Daily Kos",
-    "Vertical Rank": 20,
-    "Horizontal Rank": -24,
-    URL: "dailykos.com"
+    names: ["Daily Kos"],
+    verticalRank: 20,
+    horizontalRank: -24,
+    urls: ["dailykos.com"]
   },
   {
-    "News Source": "Daily Mail",
-    "Vertical Rank": 19,
-    "Horizontal Rank": 13,
-    URL: "dailymail.co.uk"
+    names: ["Daily Mail"],
+    verticalRank: 19,
+    horizontalRank: 13,
+    urls: ["dailymail.co.uk"]
   },
   {
-    "News Source": "Daily Signal",
-    "Vertical Rank": 30,
-    "Horizontal Rank": -15,
-    URL: "dailysignal.com"
+    names: ["Daily Signal"],
+    verticalRank: 30,
+    horizontalRank: -15,
+    urls: ["dailysignal.com"]
   },
   {
-    "News Source": "Daily Wire",
-    "Vertical Rank": 16,
-    "Horizontal Rank": 28,
-    URL: "dailywire.com"
+    names: ["Daily Wire"],
+    verticalRank: 16,
+    horizontalRank: 28,
+    urls: ["dailywire.com"]
   },
   {
-    "News Source": "David Wolfe",
-    "Vertical Rank": 2,
-    "Horizontal Rank": -32,
-    URL: "davidwolfe.com"
+    names: ["David Wolfe"],
+    verticalRank: 2,
+    horizontalRank: -32,
+    urls: ["davidwolfe.com"]
   },
   {
-    "News Source": "Democracy Now",
-    "Vertical Rank": 48,
-    "Horizontal Rank": -19,
-    URL: "democracynow.org"
+    names: ["Democracy Now"],
+    verticalRank: 48,
+    horizontalRank: -19,
+    urls: ["democracynow.org"]
   },
   {
-    "News Source": "Drudge Report",
-    "Vertical Rank": 38,
-    "Horizontal Rank": 16,
-    URL: "drudgereport.com"
+    names: ["Drudge Report"],
+    verticalRank: 38,
+    horizontalRank: 16,
+    urls: ["drudgereport.com"]
   },
   {
-    "News Source": "Financial Times",
-    "Vertical Rank": 48,
-    "Horizontal Rank": 3,
-    URL: "www.ft.com"
+    names: ["Financial Times"],
+    verticalRank: 48,
+    horizontalRank: 3,
+    urls: ["www.ft.com"]
   },
   {
-    "News Source": "Fiscal Times",
-    "Vertical Rank": 39,
-    "Horizontal Rank": 12,
-    URL: "thefiscaltimes.com"
+    names: ["Fiscal Times"],
+    verticalRank: 39,
+    horizontalRank: 12,
+    urls: ["thefiscaltimes.com"]
   },
   {
-    "News Source": "Forbes",
-    "Vertical Rank": 44,
-    "Horizontal Rank": 3,
-    URL: "forbes.com"
+    names: ["Forbes"],
+    verticalRank: 44,
+    horizontalRank: 3,
+    urls: ["forbes.com"]
   },
   {
-    "News Source": "Foreign Policy",
-    "Vertical Rank": 45,
-    "Horizontal Rank": 9,
-    URL: "foreignpolicy.com"
+    names: ["Foreign Policy"],
+    verticalRank: 45,
+    horizontalRank: 9,
+    urls: ["foreignpolicy.com"]
   },
   {
-    "News Source": "Fortune",
-    "Vertical Rank": 46,
-    "Horizontal Rank": 5,
-    URL: "fortune.com"
+    names: ["Fortune"],
+    verticalRank: 46,
+    horizontalRank: 5,
+    urls: ["fortune.com"]
   },
   {
-    "News Source": "Forward Progressives",
-    "Vertical Rank": 15,
-    "Horizontal Rank": -25,
-    URL: "forward.com"
+    names: ["Forward Progressives"],
+    verticalRank: 15,
+    horizontalRank: -25,
+    urls: ["forward.com"]
   },
   {
-    "News Source": "Fox",
-    "Vertical Rank": 20,
-    "Horizontal Rank": 27,
-    URL: "foxnews.com"
+    names: ["Fox"],
+    verticalRank: 20,
+    horizontalRank: 27,
+    urls: ["foxnews.com"]
   },
   {
-    "News Source": "FreeSpeech TV",
-    "Vertical Rank": 37,
-    "Horizontal Rank": -25,
-    URL: "freespeech.org"
+    names: ["FreeSpeech TV"],
+    verticalRank: 37,
+    horizontalRank: -25,
+    urls: ["freespeech.org"]
   },
   {
-    "News Source": "Guacamoley",
-    "Vertical Rank": 17,
-    "Horizontal Rank": -20,
-    URL: "guacamoley.com"
+    names: ["Guacamoley"],
+    verticalRank: 17,
+    horizontalRank: -20,
+    urls: ["guacamoley.com"]
   },
   {
-    "News Source": "Huffington Post",
-    "Vertical Rank": 24,
-    "Horizontal Rank": -20,
-    URL: "huffpost.com"
+    names: ["Huffington Post"],
+    verticalRank: 24,
+    horizontalRank: -20,
+    urls: ["huffpost.com"]
   },
   {
-    "News Source": "IJR",
-    "Vertical Rank": 41,
-    "Horizontal Rank": 2,
-    URL: "ijr.com"
+    names: ["IJR"],
+    verticalRank: 41,
+    horizontalRank: 2,
+    urls: ["ijr.com"]
   },
   {
-    "News Source": "InfoWars",
-    "Vertical Rank": 1,
-    "Horizontal Rank": 44,
-    URL: "infowars.com"
+    names: ["InfoWars"],
+    verticalRank: 1,
+    horizontalRank: 44,
+    urls: ["infowars.com"]
   },
   {
-    "News Source": "Intercept",
-    "Vertical Rank": 49,
-    "Horizontal Rank": -23,
-    URL: "theintercept.com"
+    names: ["Intercept"],
+    verticalRank: 49,
+    horizontalRank: -23,
+    urls: ["theintercept.com"]
   },
   {
-    "News Source": "Jacobin",
-    "Vertical Rank": 47,
-    "Horizontal Rank": -28,
-    URL: "jacobinmag.com"
+    names: ["Jacobin"],
+    verticalRank: 47,
+    horizontalRank: -28,
+    urls: ["jacobinmag.com"]
   },
   {
-    "News Source": "LA Times",
-    "Vertical Rank": 58,
-    "Horizontal Rank": -6,
-    URL: "latimes.com"
+    names: ["LA Times"],
+    verticalRank: 58,
+    horizontalRank: -6,
+    urls: ["latimes.com"]
   },
   {
-    "News Source": "Marketwatch",
-    "Vertical Rank": 50,
-    "Horizontal Rank": 5,
-    URL: "marketwatch.com"
+    names: ["Marketwatch"],
+    verticalRank: 50,
+    horizontalRank: 5,
+    urls: ["marketwatch.com"]
   },
   {
-    "News Source": "Mic",
-    "Vertical Rank": 39,
-    "Horizontal Rank": -18,
-    URL: "www.mic.com"
+    names: ["Mic"],
+    verticalRank: 39,
+    horizontalRank: -18,
+    urls: ["www.mic.com"]
   },
   {
-    "News Source": "Mother Jones",
-    "Vertical Rank": 40,
-    "Horizontal Rank": -24,
-    URL: "motherjones.com"
+    names: ["Mother Jones"],
+    verticalRank: 40,
+    horizontalRank: -24,
+    urls: ["motherjones.com"]
   },
   {
-    "News Source": "MSNBC",
-    "Vertical Rank": 34,
-    "Horizontal Rank": -19,
-    URL: "msnbc.com"
+    names: ["MSNBC"],
+    verticalRank: 34,
+    horizontalRank: -19,
+    urls: ["msnbc.com"]
   },
   {
-    "News Source": "National Enquirer",
-    "Vertical Rank": 6,
-    "Horizontal Rank": 10,
-    URL: "nationalenquirer.com"
+    names: ["National Enquirer"],
+    verticalRank: 6,
+    horizontalRank: 10,
+    urls: ["nationalenquirer.com"]
   },
   {
-    "News Source": "National Review",
-    "Vertical Rank": 51,
-    "Horizontal Rank": 20,
-    URL: "nationalreview.com"
+    names: ["National Review"],
+    verticalRank: 51,
+    horizontalRank: 20,
+    urls: ["nationalreview.com"]
   },
   {
-    "News Source": "NBC",
-    "Vertical Rank": 57,
-    "Horizontal Rank": -3,
-    URL: "nbcnews.com"
+    names: ["NBC"],
+    verticalRank: 57,
+    horizontalRank: -3,
+    urls: ["nbcnews.com"]
   },
   {
-    "News Source": "New Republic",
-    "Vertical Rank": 46,
-    "Horizontal Rank": -19,
-    URL: "newrepublic.com"
+    names: ["New Republic"],
+    verticalRank: 46,
+    horizontalRank: -19,
+    urls: ["newrepublic.com"]
   },
   {
-    "News Source": "New York Post",
-    "Vertical Rank": 20,
-    "Horizontal Rank": 18,
-    URL: "nypost.com"
+    names: ["New York Post"],
+    verticalRank: 20,
+    horizontalRank: 18,
+    urls: ["nypost.com"]
   },
   {
-    "News Source": "New York Times",
-    "Vertical Rank": 52,
-    "Horizontal Rank": -5,
-    URL: "nytimes.com"
+    names: ["New York Times"],
+    verticalRank: 52,
+    horizontalRank: -5,
+    urls: ["nytimes.com"]
   },
   {
-    "News Source": "News and Guts",
-    "Vertical Rank": 31,
-    "Horizontal Rank": -15,
-    URL: "newsandguts.com"
+    names: ["News and Guts"],
+    verticalRank: 31,
+    horizontalRank: -15,
+    urls: ["newsandguts.com"]
   },
   {
-    "News Source": "NewsMax",
-    "Vertical Rank": 43,
-    "Horizontal Rank": -28,
-    URL: "newsmax.com"
+    names: ["NewsMax"],
+    verticalRank: 43,
+    horizontalRank: -28,
+    urls: ["newsmax.com"]
   },
   {
-    "News Source": "NPR",
-    "Vertical Rank": 56,
-    "Horizontal Rank": -5,
-    URL: "npr.org"
+    names: ["NPR"],
+    verticalRank: 56,
+    horizontalRank: -5,
+    urls: ["npr.org"]
   },
   {
-    "News Source": "OAN",
-    "Vertical Rank": 23,
-    "Horizontal Rank": 28,
-    URL: "oann.com"
+    names: ["OAN"],
+    verticalRank: 23,
+    horizontalRank: 28,
+    urls: ["oann.com"]
   },
   {
-    "News Source": "Occupy Democrats",
-    "Vertical Rank": 9,
-    "Horizontal Rank": -30,
-    URL: "occupydemocrats.com"
+    names: ["Occupy Democrats"],
+    verticalRank: 9,
+    horizontalRank: -30,
+    urls: ["occupydemocrats.com"]
   },
   {
-    "News Source": "OZY",
-    "Vertical Rank": 43,
-    "Horizontal Rank": 0,
-    URL: "www.ozy.com"
+    names: ["OZY"],
+    verticalRank: 43,
+    horizontalRank: 0,
+    urls: ["www.ozy.com"]
   },
   {
-    "News Source": "Palmer Report",
-    "Vertical Rank": 8,
-    "Horizontal Rank": -34,
-    URL: "palmerreport.com"
+    names: ["Palmer Report"],
+    verticalRank: 8,
+    horizontalRank: -34,
+    urls: ["palmerreport.com"]
   },
   {
-    "News Source": "Patribotics",
-    "Vertical Rank": 1,
-    "Horizontal Rank": -40,
-    URL: "patribotics.blog"
+    names: ["Patribotics"],
+    verticalRank: 1,
+    horizontalRank: -40,
+    urls: ["patribotics.blog"]
   },
   {
-    "News Source": "PBS",
-    "Vertical Rank": 57,
-    "Horizontal Rank": -5,
-    URL: "pbs.org"
+    names: ["PBS"],
+    verticalRank: 57,
+    horizontalRank: -5,
+    urls: ["pbs.org"]
   },
   {
-    "News Source": "PJ Media",
-    "Vertical Rank": 17,
-    "Horizontal Rank": 26,
-    URL: "pjmedia.com"
+    names: ["PJ Media"],
+    verticalRank: 17,
+    horizontalRank: 26,
+    urls: ["pjmedia.com"]
   },
   {
-    "News Source": "Politico",
-    "Vertical Rank": 55,
-    "Horizontal Rank": -3,
-    URL: "politico.com"
+    names: ["Politico"],
+    verticalRank: 55,
+    horizontalRank: -3,
+    urls: ["politico.com"]
   },
   {
-    "News Source": "ProPublica",
-    "Vertical Rank": 46,
-    "Horizontal Rank": -5,
-    URL: "propublica.org"
+    names: ["ProPublica"],
+    verticalRank: 46,
+    horizontalRank: -5,
+    urls: ["propublica.org"]
   },
   {
-    "News Source": "Quartz",
-    "Vertical Rank": 44,
-    "Horizontal Rank": -5,
-    URL: "qz.com"
+    names: ["Quartz"],
+    verticalRank: 44,
+    horizontalRank: -5,
+    urls: ["qz.com"]
   },
   {
-    "News Source": "Reason",
-    "Vertical Rank": 42,
-    "Horizontal Rank": 18,
-    URL: "/reason.com"
+    names: ["Reason"],
+    verticalRank: 42,
+    horizontalRank: 18,
+    urls: ["/reason.com"]
   },
   {
-    "News Source": "RedState",
-    "Vertical Rank": 11,
-    "Horizontal Rank": 29,
-    URL: "redstate.com"
+    names: ["RedState"],
+    verticalRank: 11,
+    horizontalRank: 29,
+    urls: ["redstate.com"]
   },
   {
-    "News Source": "Reuters",
-    "Vertical Rank": 62,
-    "Horizontal Rank": 0,
-    URL: "reuters.com"
+    names: ["Reuters"],
+    verticalRank: 62,
+    horizontalRank: 0,
+    urls: ["reuters.com"]
   },
   {
-    "News Source": "Second Nexus",
-    "Vertical Rank": 23,
-    "Horizontal Rank": -23,
-    URL: "secondnexus.com"
+    names: ["Second Nexus"],
+    verticalRank: 23,
+    horizontalRank: -23,
+    urls: ["secondnexus.com"]
   },
   {
-    "News Source": "ShareBlue",
-    "Vertical Rank": 33,
-    "Horizontal Rank": -21,
-    URL: "shareblue.com"
+    names: ["ShareBlue"],
+    verticalRank: 33,
+    horizontalRank: -21,
+    urls: ["shareblue.com"]
   },
   {
-    "News Source": "Slate",
-    "Vertical Rank": 43,
-    "Horizontal Rank": -20,
-    URL: "slate.com"
+    names: ["Slate"],
+    verticalRank: 43,
+    horizontalRank: -20,
+    urls: ["slate.com"]
   },
   {
-    "News Source": "Talking Points Memo",
-    "Vertical Rank": 41,
-    "Horizontal Rank": -13,
-    URL: "talkingpointsmemo.com"
+    names: ["Talking Points Memo"],
+    verticalRank: 41,
+    horizontalRank: -13,
+    urls: ["talkingpointsmemo.com"]
   },
   {
-    "News Source": "The Advocate",
-    "Vertical Rank": 40,
-    "Horizontal Rank": -23,
-    URL: "theadvocate.com"
+    names: ["The Advocate"],
+    verticalRank: 40,
+    horizontalRank: -23,
+    urls: ["theadvocate.com"]
   },
   {
-    "News Source": "The American Conservative",
-    "Vertical Rank": 33,
-    "Horizontal Rank": 28,
-    URL: "theamericanconservative.com"
+    names: ["The American Conservative"],
+    verticalRank: 33,
+    horizontalRank: 28,
+    urls: ["theamericanconservative.com"]
   },
   {
-    "News Source": "The Atlantic",
-    "Vertical Rank": 46,
-    "Horizontal Rank": -15,
-    URL: "theatlantic.com"
+    names: ["The Atlantic"],
+    verticalRank: 46,
+    horizontalRank: -15,
+    urls: ["theatlantic.com"]
   },
   {
-    "News Source": "The Blaze",
-    "Vertical Rank": 8,
-    "Horizontal Rank": 27,
-    URL: "theblaze.com"
+    names: ["The Blaze"],
+    verticalRank: 8,
+    horizontalRank: 27,
+    urls: ["theblaze.com"]
   },
   {
-    "News Source": "The Economist",
-    "Vertical Rank": 48,
-    "Horizontal Rank": 4,
-    URL: "economist.com"
+    names: ["The Economist"],
+    verticalRank: 48,
+    horizontalRank: 4,
+    urls: ["economist.com"]
   },
   {
-    "News Source": "The Federalist",
-    "Vertical Rank": 26,
-    "Horizontal Rank": 27,
-    URL: "thefederalist.com"
+    names: ["The Federalist"],
+    verticalRank: 26,
+    horizontalRank: 27,
+    urls: ["thefederalist.com"]
   },
   {
-    "News Source": "The Gateway Pundit",
-    "Vertical Rank": 12,
-    "Horizontal Rank": 35,
-    URL: "thegatewaypundit.com"
+    names: ["The Gateway Pundit"],
+    verticalRank: 12,
+    horizontalRank: 35,
+    urls: ["thegatewaypundit.com"]
   },
   {
-    "News Source": "The Guardian",
-    "Vertical Rank": 48,
-    "Horizontal Rank": -6,
-    URL: "theguardian.com"
+    names: ["The Guardian"],
+    verticalRank: 48,
+    horizontalRank: -6,
+    urls: ["theguardian.com"]
   },
   {
-    "News Source": "The Hill",
-    "Vertical Rank": 54,
-    "Horizontal Rank": 9,
-    URL: "thehill.com"
+    names: ["The Hill"],
+    verticalRank: 54,
+    horizontalRank: 9,
+    urls: ["thehill.com"]
   },
   {
-    "News Source": "The Nation",
-    "Vertical Rank": 47,
-    "Horizontal Rank": -17,
-    URL: "thenation.com"
+    names: ["The Nation"],
+    verticalRank: 47,
+    horizontalRank: -17,
+    urls: ["thenation.com"]
   },
   {
-    "News Source": "The New Yorker",
-    "Vertical Rank": 47,
-    "Horizontal Rank": -9,
-    URL: "/newyorker.com"
+    names: ["The New Yorker"],
+    verticalRank: 47,
+    horizontalRank: -9,
+    urls: ["/newyorker.com"]
   },
   {
-    "News Source": "The Skimm",
-    "Vertical Rank": 49,
-    "Horizontal Rank": -2,
-    URL: "theskimm.com"
+    names: ["The Skimm"],
+    verticalRank: 49,
+    horizontalRank: -2,
+    urls: ["theskimm.com"]
   },
   {
-    "News Source": "The Week",
-    "Vertical Rank": 44,
-    "Horizontal Rank": -10,
-    URL: "theweek.com"
+    names: ["The Week"],
+    verticalRank: 44,
+    horizontalRank: -10,
+    urls: ["theweek.com"]
   },
   {
-    "News Source": "The Weekly Standard",
-    "Vertical Rank": 46,
-    "Horizontal Rank": 18,
-    URL: "weeklystandard.com"
+    names: ["The Weekly Standard"],
+    verticalRank: 46,
+    horizontalRank: 18,
+    urls: ["weeklystandard.com"]
   },
   {
-    "News Source": "The Young Turks",
-    "Vertical Rank": 27,
-    "Horizontal Rank": -24,
-    URL: "tyt.com"
+    names: ["The Young Turks"],
+    verticalRank: 27,
+    horizontalRank: -24,
+    urls: ["tyt.com"]
   },
   {
-    "News Source": "Think Progress",
-    "Vertical Rank": 42,
-    "Horizontal Rank": -13,
-    URL: "thinkprogress.org"
+    names: ["Think Progress"],
+    verticalRank: 42,
+    horizontalRank: -13,
+    urls: ["thinkprogress.org"]
   },
   {
-    "News Source": "Time",
-    "Vertical Rank": 43,
-    "Horizontal Rank": -1,
-    URL: "/time.com"
+    names: ["Time"],
+    verticalRank: 43,
+    horizontalRank: -1,
+    urls: ["/time.com"]
   },
   {
-    "News Source": "Truthout",
-    "Vertical Rank": 36,
-    "Horizontal Rank": -24,
-    URL: "truthout.org"
+    names: ["Truthout"],
+    verticalRank: 36,
+    horizontalRank: -24,
+    urls: ["truthout.org"]
   },
   {
-    "News Source": "Twitchy",
-    "Vertical Rank": 14,
-    "Horizontal Rank": 29,
-    URL: "twitchy.com"
+    names: ["Twitchy"],
+    verticalRank: 14,
+    horizontalRank: 29,
+    urls: ["twitchy.com"]
   },
   {
-    "News Source": "USA Today",
-    "Vertical Rank": 52,
-    "Horizontal Rank": 0,
-    URL: "usatoday.com"
+    names: ["USA Today"],
+    verticalRank: 52,
+    horizontalRank: 0,
+    urls: ["usatoday.com"]
   },
   {
-    "News Source": "Vanity Fair",
-    "Vertical Rank": 38,
-    "Horizontal Rank": -12,
-    URL: "vanityfair.com"
+    names: ["Vanity Fair"],
+    verticalRank: 38,
+    horizontalRank: -12,
+    urls: ["vanityfair.com"]
   },
   {
-    "News Source": "Vice",
-    "Vertical Rank": 42,
-    "Horizontal Rank": -10,
-    URL: "vice.com"
+    names: ["Vice"],
+    verticalRank: 42,
+    horizontalRank: -10,
+    urls: ["vice.com"]
   },
   {
-    "News Source": "Vox",
-    "Vertical Rank": 43,
-    "Horizontal Rank": -16,
-    URL: "vox.com"
+    names: ["Vox"],
+    verticalRank: 43,
+    horizontalRank: -16,
+    urls: ["vox.com"]
   },
   {
-    "News Source": "Wall Street Journal",
-    "Vertical Rank": 53,
-    "Horizontal Rank": 11,
-    URL: "wsj.com"
+    names: ["Wall Street Journal"],
+    verticalRank: 53,
+    horizontalRank: 11,
+    urls: ["wsj.com"]
   },
   {
-    "News Source": "Washington Examiner",
-    "Vertical Rank": 35,
-    "Horizontal Rank": 18,
-    URL: "washingtonexaminer.com"
+    names: ["Washington Examiner"],
+    verticalRank: 35,
+    horizontalRank: 18,
+    urls: ["washingtonexaminer.com"]
   },
   {
-    "News Source": "Washington Free Beacon",
-    "Vertical Rank": 41,
-    "Horizontal Rank": 24,
-    URL: "freebeacon.com"
+    names: ["Washington Free Beacon"],
+    verticalRank: 41,
+    horizontalRank: 24,
+    urls: ["freebeacon.com"]
   },
   {
-    "News Source": "Washington Monthly",
-    "Vertical Rank": 30,
-    "Horizontal Rank": -23,
-    URL: "washingtonmonthly.com"
+    names: ["Washington Monthly"],
+    verticalRank: 30,
+    horizontalRank: -23,
+    urls: ["washingtonmonthly.com"]
   },
   {
-    "News Source": "Washington Post",
-    "Vertical Rank": 51,
-    "Horizontal Rank": -10,
-    URL: "washingtonpost.com"
+    names: ["Washington Post"],
+    verticalRank: 51,
+    horizontalRank: -10,
+    urls: ["washingtonpost.com"]
   },
   {
-    "News Source": "Washington Times",
-    "Vertical Rank": 33,
-    "Horizontal Rank": 20,
-    URL: "washingtontimes.com"
+    names: ["Washington Times"],
+    verticalRank: 33,
+    horizontalRank: 20,
+    urls: ["washingtontimes.com"]
   },
   {
-    "News Source": "WND",
-    "Vertical Rank": 4,
-    "Horizontal Rank": 36,
-    URL: "wnd.com"
+    names: ["WND"],
+    verticalRank: 4,
+    horizontalRank: 36,
+    urls: ["wnd.com"]
   },
   {
-    "News Source": "Wonkette",
-    "Vertical Rank": 12,
-    "Horizontal Rank": -34,
-    URL: "wonkette.com"
+    names: ["Wonkette"],
+    verticalRank: 12,
+    horizontalRank: -34,
+    urls: ["wonkette.com"]
   },
   {
-    "News Source": "WorldTruth.Tv",
-    "Vertical Rank": 1,
-    "Horizontal Rank": 20,
-    URL: "worldtruth.tv"
+    names: ["WorldTruth.Tv"],
+    verticalRank: 1,
+    horizontalRank: 20,
+    urls: ["worldtruth.tv"]
   }
 ];
+
+/**
+ * Political Bias (horizontal rank)
+ */
+const politicalBias = [
+  {
+    description: "Most Extreme Left",
+    range: [-42, -30]
+  },
+  {
+    description: "Hyper-Partisan Left",
+    range: [-29, -18]
+  },
+  {
+    description: "Skews Left",
+    range: [-17, -6]
+  },
+  {
+    description: "Neutral (minimal or balanced bias)",
+    range: [-5, 5]
+  },
+  {
+    description: "Skews Right",
+    range: [6, 17]
+  },
+  {
+    description: "Hyper-Partisan Right",
+    range: [18, 29]
+  },
+  {
+    description: "Most Extreme Right",
+    range: [30, 42]
+  }
+];
+
+/**
+ * Overall Quality (vertical rank)
+ */
+const overallQuality = [
+  {
+    description: "Contains Inaccurate/Fabricated Information",
+    range: [0, 8]
+  },
+  {
+    description: "Propaganda/Contains Misleading Information",
+    range: [9, 16]
+  },
+  {
+    description: "Selective or Incomplete; Unfair Persuasion",
+    range: [17, 24]
+  },
+  {
+    description: "Opinion; Fair Persuasion",
+    range: [25, 32]
+  },
+  {
+    description: "Analysis",
+    range: [33, 40]
+  },
+  {
+    description: "Complex Analysis OR Mix of Fact Reporting and Analysis",
+    range: [41, 48]
+  },
+  {
+    description: "Fact Reporting",
+    range: [49, 56]
+  },
+  {
+    description: "Original Fact Reporting",
+    range: [57, 64]
+  }
+];
+
+/**
+ * Color boxes
+ */
+const colorBoxes = [
+  {
+    description: "News",
+    color: "green",
+    horizontalRange: [-18, 18],
+    verticalRange: [45, 64]
+  },
+  {
+    description: "Fair interpretations of the news",
+    color: "yellow",
+    horizontalRange: [-22, 22],
+    verticalRange: [24, 53]
+  },
+  {
+    description: "Extreme/Unfair interpretations of the news",
+    color: "orange",
+    horizontalRange: [-42, -23],
+    verticalRange: [20, 53]
+  },
+  {
+    description: "Extreme/Unfair interpretations of the news",
+    color: "orange",
+    horizontalRange: [23, 42],
+    verticalRange: [20, 53]
+  },
+  {
+    description: "Extreme/Unfair interpretations of the news",
+    color: "orange",
+    horizontalRange: [-42, 42],
+    verticalRange: [16, 24]
+  },
+  {
+    description: "Nonsense damaging to public discourse",
+    color: "red",
+    horizontalRange: [-42, 42],
+    verticalRange: [0, 20]
+  }
+];
+
+/**
+ * Map of color code keyed by color class
+ */
+const colorMap = {
+  green: "#096b09",
+  green_yellow: "#61ab1b",
+  yellow: "#acad00",
+  yellow_orange: "#f6b60a",
+  orange: "#ed6d12",
+  orange_red: "#ff5c2f",
+  red: "#ff0000",
+  COLOR_MISSING: "magenta"
+};
+
+/**
+ * Create media bias css to be injected into the page
+ */
+export function createMediaBiasCss() {
+  const colorClasses = Object.keys(colorMap);
+  const linkStyles = colorClasses.map(colorClass => {
+    const colorCode = colorMap[colorClass];
+
+    return `
+      a.${colorClass}, 
+      a.${colorClass} * {
+        color: ${colorCode} !important;
+        /* font-weight: bold !important; */
+      }
+    `;
+  });
+
+  return `<style id="mediaBias">${linkStyles.join("")}</style>`;
+}
+
+/**
+ * Find the source for a link
+ *
+ * @param {HTMLAnchorElement} link
+ */
+export function findSource(link) {
+  const source = sources.find(source => {
+    const urlMatchesSource = source.urls.find(url => {
+      return link.href.includes(url);
+    });
+    const textMatchesSource = source.names.find(sourceName => {
+      return link.innerText.toUpperCase() === sourceName.toUpperCase();
+    });
+
+    return textMatchesSource || urlMatchesSource;
+  });
+
+  console.log("sourcex", source);
+  return source;
+}
+
+/**
+ * Find the political bias of a news source
+ *
+ * @param source
+ */
+export function findBias(source) {
+  const rank = source.horizontalRank;
+  return politicalBias.find(bias => {
+    return bias.range[0] <= rank && rank <= bias.range[1];
+  });
+}
+
+/**
+ * Find the overall quality of a news source
+ *
+ * @param source
+ */
+export function findQuality(source) {
+  const rank = source.verticalRank;
+  const quality = overallQuality.find(quality => {
+    return quality.range[0] <= rank && rank <= quality.range[1];
+  });
+
+  return quality;
+}
+
+/**
+ * Find the color box(es) a news source falls in
+ *
+ * @param source
+ */
+export function findColorBoxes(source) {
+  const boxes = colorBoxes.filter(box => {
+    const isInHorizontalRange =
+      box.horizontalRange[0] <= source.horizontalRank &&
+      source.horizontalRank <= box.horizontalRange[1];
+
+    const isInVerticalRange =
+      box.verticalRange[0] <= source.verticalRank &&
+      source.verticalRank <= box.verticalRange[1];
+
+    return isInHorizontalRange && isInVerticalRange;
+  });
+
+  return boxes.length ? boxes : undefined;
+}
+
+/**
+ * Find the color class for a news source
+ *
+ * @param source
+ */
+export function findColorClass(source) {
+  const colorBoxes = findColorBoxes(source) || [];
+  const colors = colorBoxes.map(colorBox => {
+    return colorBox.color;
+  });
+
+  // Make sure any duplicates are removed before joining
+  return [...new Set(colors)].join("_");
+}
+
+/**
+ * Find the color code for a news source
+ *
+ * @param source
+ */
+export function findColorCode(source) {
+  return colorMap[findColorClass(source)];
+}
+
+/**
+ * Find the description corresponding to a news source's color key(s)
+ *
+ * @param source
+ */
+export function findColorDescription(source) {
+  const colorBoxes = findColorBoxes(source);
+  const categories = colorBoxes.map(colorBox => {
+    return colorBox.description;
+  });
+
+  // Make sure any duplicates are removed before joining
+  return [...new Set(categories)].join(" / ");
+}
+
+/**
+ * Create a media bias summary for a news source
+ *
+ * @param source
+ */
+export function createMediaBiasSummary(source) {
+  const colorClass = findColorClass(source) || "COLOR_MISSING";
+  const colorKey = colorClass.toUpperCase().replace("_", " / ");
+  const quality = findQuality(source);
+  const bias = findBias(source);
+  const colorDescription = findColorDescription(source);
+  const mediaBiasSummary = [
+    `SOURCE\n${source.names[0]}\n\n`,
+    `${colorKey}\n${colorDescription}\n\n`,
+    `POLITICAL BIAS\n${bias.description}\n\n`,
+    `OVERALL QUALITY\n${quality.description}`
+  ].join("");
+
+  return mediaBiasSummary;
+}

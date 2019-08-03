@@ -1,1 +1,1 @@
-import "./updateLinkColors.js";
+import "./updateLinks.js";
