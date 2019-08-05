@@ -3,7 +3,7 @@
  */
 export const sources = [
   {
-    names: ["ABC"],
+    names: ["ABC News"],
     verticalRank: 57,
     horizontalRank: 0,
     urls: ["abcnews.com", "abcnews"]
@@ -14,12 +14,14 @@ export const sources = [
     horizontalRank: 0,
     urls: ["afp.com"]
   },
-  {
-    names: ["Al Jazeera US/Canada News"],
-    verticalRank: 54,
-    horizontalRank: -1,
-    urls: ["aljazeera.com"]
-  },
+  // TODO: Looks like there's not a good way to distinguish us/canada from
+  //       other Al Jazeera news. Disabling for now.
+  // {
+  //   names: ["Al Jazeera US/Canada News"],
+  //   verticalRank: 54,
+  //   horizontalRank: -1,
+  //   urls: ["aljazeera.com"]
+  // },
   {
     names: ["Alternet"],
     verticalRank: 18,
@@ -33,7 +35,7 @@ export const sources = [
     urls: ["www.ap.org"]
   },
   {
-    names: ["APNews"],
+    names: ["APNews", "AP News"],
     verticalRank: 62,
     horizontalRank: 0,
     urls: ["www.apnews.com"]
@@ -45,7 +47,7 @@ export const sources = [
     urls: ["axios.com"]
   },
   {
-    names: ["BBC"],
+    names: ["BBC News", "BBCNews"],
     verticalRank: 54,
     horizontalRank: -3,
     urls: ["bbc.com"]
@@ -75,13 +77,13 @@ export const sources = [
     urls: ["businessinsider.com"]
   },
   {
-    names: ["BuzzFeed News"],
+    names: ["BuzzFeed News", "BuzzFeedNews"],
     verticalRank: 51,
     horizontalRank: -15,
     urls: ["buzzfeednews.com"]
   },
   {
-    names: ["CBS"],
+    names: ["CBS News", "CBSNews"],
     verticalRank: 57,
     horizontalRank: 4,
     urls: ["cbsnews.com"]
@@ -201,7 +203,7 @@ export const sources = [
     urls: ["forward.com"]
   },
   {
-    names: ["Fox"],
+    names: ["Fox News", "FoxNews"],
     verticalRank: 20,
     horizontalRank: 27,
     urls: ["foxnews.com"]
@@ -219,7 +221,7 @@ export const sources = [
     urls: ["guacamoley.com"]
   },
   {
-    names: ["Huffington Post"],
+    names: ["Huffington Post", "HuffPost"],
     verticalRank: 24,
     horizontalRank: -20,
     urls: ["huffpost.com"]
@@ -249,7 +251,7 @@ export const sources = [
     urls: ["jacobinmag.com"]
   },
   {
-    names: ["LA Times"],
+    names: ["LA Times", "Los Angeles Times"],
     verticalRank: 58,
     horizontalRank: -6,
     urls: ["latimes.com"]
@@ -291,7 +293,7 @@ export const sources = [
     urls: ["nationalreview.com"]
   },
   {
-    names: ["NBC"],
+    names: ["NBC News", "NBCNews"],
     verticalRank: 57,
     horizontalRank: -3,
     urls: ["nbcnews.com"]
@@ -303,13 +305,13 @@ export const sources = [
     urls: ["newrepublic.com"]
   },
   {
-    names: ["New York Post"],
+    names: ["New York Post", "NY Post"],
     verticalRank: 20,
     horizontalRank: 18,
     urls: ["nypost.com"]
   },
   {
-    names: ["New York Times"],
+    names: ["New York Times", "NY Times"],
     verticalRank: 52,
     horizontalRank: -5,
     urls: ["nytimes.com"]
@@ -327,7 +329,7 @@ export const sources = [
     urls: ["newsmax.com"]
   },
   {
-    names: ["NPR"],
+    names: ["NPR", "NPR News", "NPRNews"],
     verticalRank: 56,
     horizontalRank: -5,
     urls: ["npr.org"]
@@ -363,7 +365,7 @@ export const sources = [
     urls: ["patribotics.blog"]
   },
   {
-    names: ["PBS"],
+    names: ["PBS", "PBS News", "PBSNews"],
     verticalRank: 57,
     horizontalRank: -5,
     urls: ["pbs.org"]
@@ -567,13 +569,13 @@ export const sources = [
     urls: ["vice.com"]
   },
   {
-    names: ["Vox"],
+    names: ["Vox", "Vox News", "VoxNews"],
     verticalRank: 43,
     horizontalRank: -16,
     urls: ["vox.com"]
   },
   {
-    names: ["Wall Street Journal"],
+    names: ["Wall Street Journal", "Wall Street Journal"],
     verticalRank: 53,
     horizontalRank: 11,
     urls: ["wsj.com"]
@@ -752,8 +754,7 @@ const colorMap = {
   yellow_orange: "#f6b60a",
   orange: "#ed6d12",
   orange_red: "#ff5c2f",
-  red: "#ff0000",
-  COLOR_MISSING: "magenta"
+  red: "#ff0000"
 };
 
 /**
@@ -768,7 +769,6 @@ export function createMediaBiasCss() {
       a.${colorClass}, 
       a.${colorClass} * {
         color: ${colorCode} !important;
-        /* font-weight: bold !important; */
       }
     `;
   });
@@ -782,18 +782,98 @@ export function createMediaBiasCss() {
  * @param {HTMLAnchorElement} link
  */
 export function findSource(link) {
+  return (
+    findSourceFromLinkHref(link) ||
+    findSourceFromLinkText(link) ||
+    findSourceForGoogleNewsLink(link)
+  );
+}
+
+/**
+ * Find news source from a link's href
+ *
+ * @param {HTMLAnchorElement} link
+ */
+export function findSourceFromLinkHref(link) {
+  const linkHref = link.href;
+
+  // Find the source
   const source = sources.find(source => {
-    const urlMatchesSource = source.urls.find(url => {
-      return link.href.includes(url);
-    });
-    const textMatchesSource = source.names.find(sourceName => {
-      return link.innerText.toUpperCase() === sourceName.toUpperCase();
+    // Find source url that matches the link href
+    const matchingUrl = source.urls.find(url => {
+      return linkHref.includes(url);
     });
 
-    return textMatchesSource || urlMatchesSource;
+    // Return whether we found a matching source url
+    return !!matchingUrl;
   });
 
-  console.log("sourcex", source);
+  return source;
+}
+
+/**
+ * Find news source from a link's text
+ *
+ * @param {HTMLAnchorElement} link
+ */
+export function findSourceFromLinkText(link) {
+  const linkText = link.innerText;
+
+  // Allow for name variations
+  const nameVariationRx = new RegExp("(^THE )|(\\.COM$)");
+
+  // Find the source
+  const source = sources.find(source => {
+    // Find source name that matches the link text
+    const matchingName = source.names.find(sourceName => {
+      // Check for match (allowing for name variations)
+      return (
+        linkText.toUpperCase().replace(nameVariationRx, "") ===
+        sourceName.toUpperCase().replace(nameVariationRx, "")
+      );
+    });
+
+    // Return whether we found a matching source name
+    return !!matchingName;
+  });
+
+  return source;
+}
+
+/**
+ * Find news source for a link from news.google.com
+ *
+ * @param {HTMLAnchorElement} link
+ */
+function findSourceForGoogleNewsLink(link) {
+  if (link.host !== "news.google.com") {
+    return;
+  }
+
+  // Find whether link is for an article
+  const $link = $(link);
+  const $article = $link.closest("article");
+  if (!$article.length) {
+    return;
+  }
+
+  // Find the article source
+  let source;
+  const articleLinks = $article.find("a").toArray();
+  for (let i = 0, len = articleLinks.length; i < len; i++) {
+    const articleLink = articleLinks[i];
+
+    source = findSourceFromLinkHref(articleLink);
+    if (source) {
+      break;
+    }
+
+    source = findSourceFromLinkText(articleLink);
+    if (source) {
+      break;
+    }
+  }
+
   return source;
 }
 
