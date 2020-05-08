@@ -22,7 +22,7 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/meyerclemon/media-bias-extension
+$ git clone https://github.com/meyerclemon/maya-media-bias-check
 # Navigate to chrome://extensions
 # Select 'Developer Mode'
 # Drag media-bias-extension folder to extensions page
